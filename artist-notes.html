@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist's Notes</title>
+  <link rel="stylesheet" href="style.css">
+   <style>
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 1.2rem 0;
+      background-color: rgba(255, 255, 255, 0.2) transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+     nav a {
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #3478ff; /* White text */
+      border: 2px solid #ffffff; /* Blue border */
+      background-color: #ffffff; /* Blue fill */
+      padding: 0.4rem 0.8rem;
+      border-radius: 16px;
+      transition: all 0.4s ease;
+    }
+
+     nav a:hover {
+      color: #ffffff; /* Blue text */
+      border-color: #ffffff; /* White border */
+      background-color:transparent;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+
+  </style>
+</head>
+<body>
+      <nav>
+    <a href="index.html">home</a>
+    <a href="kiki-portfolio.html">kirk</a>
+    <a href="lyndsay-portfolio.html">lyndsay</a>
+    <a href="artist-notes.html">artist notes</a>
+  </nav>
+
+  <div class="container">
+    <div class="background">
+      <img src="/assets for summative/artists notes background.png" alt="Portfolio Background" class="bg-image" />
+    </div>
+</div>  
+  <img src="/New assets/assets for summative/kirk artist notes transparent bg.png" alt="Left Character" class="hover-img left">
+  <img src="/assets for summative/lyndsay artist notes transparent bg.png" alt="Right Character" class="hover-img right">
+
+</body>
+</html>
+<style>
+    body {
+  margin: 0;
+  height: 100vh;
+  background: url('/assets\ for\ summative/artist notes page reference.png') center/cover no-repeat;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hover-img {
+  position: absolute;
+  transition: transform 3s ease-in-out;
+  animation: float 4s ease-in-out infinite;
+}
+.left {
+  bottom: 1%;
+  left: 2%;
+  width: 1750px;
+}
+
+.right {
+  top: 3%;
+  right: 1%;
+  width: 1750px;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.hover-img:hover {
+  animation: wiggle 0.4s ease-in-out;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+</style>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiki Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== NAVBAR ===== */
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 1.2rem 0;
+      background: transparent; /* Fully transparent navbar */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #ffffff; /* White text */
+      border: 2px solid #ffffff; /* Blue border */
+      background-color: #3478ff; /* Blue fill */
+      padding: 0.4rem 0.8rem;
+      border-radius: 16px;
+      transition: all 0.4s ease;
+    }
+
+    nav a:hover {
+      color: #3478ff; /* Blue text */
+      border-color: #ffffff; /* White border */
+       background-color: #ffffff; /* Blue fill */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .folder {
+      position: absolute;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .folder img {
+      width: 100%;
+      height: auto;
+    }
+
+    .folder:hover {
+      animation: wiggle 0.5s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 150, 0.7));
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(0deg) translateY(-5px) scale(1.05); }
+      25% { transform: rotate(3deg) translateY(-5px) scale(1.05); }
+      50% { transform: rotate(0deg) translateY(-5px) scale(1.05); }
+      75% { transform: rotate(-3deg) translateY(-5px) scale(1.05); }
+      100% { transform: rotate(0deg) translateY(-5px) scale(1.05); }
+    }
+
+    #folder1 { top: 18%; left: 5%; }
+    #folder2 { top: 40%; right: 15%; }
+    #folder3 { bottom: 15%; left: 15%; }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: #fff;
+      font-size: 2.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      color: #3478ff; /* Blue hover for close button */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="index.html">home</a>
+      <a href="kiki-portfolio.html">kirk</a>
+      <a href="lyndsay-portfolio.html">lyndsay</a>
+      <a href="artist-notes.html">artist notes</a>
+    </nav>
+
+    <img src="/assets for summative/kirk page bg.png" alt="Background" class="background" />
+
+    <a href="#img1" class="folder" id="folder1">
+      <img src="/New assets/assets for summative/transparent folders/emmalynkoltz.png" alt="Folder 1" />
+    </a>
+
+    <a href="#img2" class="folder" id="folder2">
+      <img src="/New assets/assets for summative/transparent folders/gorillazcasette.png" alt="Folder 2" />
+    </a>
+
+    <a href="#img3" class="folder" id="folder3">
+      <img src="/New assets/assets for summative/transparent folders/hyougen.png" alt="Folder 3" />
+    </a>
+  </div>
+
+  <!-- ===== LIGHTBOXES ===== -->
+  <div class="lightbox" id="img1">
+    <a href="#" class="close-btn">×</a>
+    <img src="/assets for summative/emmalyn.png" alt="Content 1" />
+  </div>
+
+  <div class="lightbox" id="img2">
+    <a href="#" class="close-btn">×</a>
+    <img src="/assets for summative/gorillaz.png" alt="Content 2" />
+  </div>
+
+  <div class="lightbox" id="img3">
+    <a href="#" class="close-btn">×</a>
+    <img src="/assets for summative/hyougen.png" alt="Content 3" />
+  </div>
+</body>
+</html>
